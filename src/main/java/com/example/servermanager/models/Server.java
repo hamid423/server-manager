@@ -13,12 +13,12 @@ import lombok.NoArgsConstructor;
 public class Server {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
     @Column(unique = true)
-    @NotEmpty(message = "Ip adress cannot be empty or null")
+    @NotEmpty(message = "Ip address cannot be empty or null")
     private String ipAddress;
+    private String name;
     private String memory;
-    private String imageUrl;
     private String type;
+    private String imageUrl;
     private Status status;
 }
